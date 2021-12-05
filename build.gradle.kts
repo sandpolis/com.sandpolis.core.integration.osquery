@@ -17,10 +17,17 @@ plugins {
 dependencies {
 	testImplementation("org.junit.jupiter:junit-jupiter-api:5.+")
 	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.+")
+	
+	// https://github.com/FasterXML/jackson-databind
+	implementation("com.fasterxml.jackson.core:jackson-databind:2.12.4")
 
 	if (project.getParent() == null) {
 		implementation("com.sandpolis:core.foundation:+")
+		implementation("com.sandpolis:core.instance:+")
+		implementation("com.sandpolis:core.integration.pacman:+")
 	} else {
-		implementation(project(":module:com.sandpolis.core.foundation"))
+		implementation(project(":core:com.sandpolis.core.foundation"))
+		implementation(project(":core:com.sandpolis.core.instance"))
+		implementation(project(":core:integration:com.sandpolis.core.integration.pacman"))
 	}
 }

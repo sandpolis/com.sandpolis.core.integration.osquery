@@ -12,4 +12,7 @@ open module com.sandpolis.core.integration.osquery {
 
 	requires com.sandpolis.core.foundation;
 	requires org.slf4j;
+	requires java.net.http;
+	requires com.sandpolis.core.integration.pacman;
+	requires com.fasterxml.jackson.databind;
 }
