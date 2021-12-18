@@ -52,7 +52,7 @@ public class Installer {
 
 		// Attempt to install with a package manager first
 		if (Pacman.isAvailable()) {
-			if (Pacman.load().install("osquery").exitValue() == 0) {
+			if (Pacman.load().install("osquery").complete() == 0) {
 				return;
 			}
 		}
