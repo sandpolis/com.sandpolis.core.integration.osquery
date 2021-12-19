@@ -1,13 +1,12 @@
 //============================================================================//
 //                                                                            //
-//                         Copyright © 2015 Sandpolis                         //
+//            Copyright © 2015 - 2022 Sandpolis Software Foundation           //
 //                                                                            //
 //  This source file is subject to the terms of the Mozilla Public License    //
-//  version 2. You may not use this file except in compliance with the MPL    //
-//  as published by the Mozilla Foundation.                                   //
+//  version 2. You may not use this file except in compliance with the MPLv2. //
 //                                                                            //
 //============================================================================//
-package com.sandpolis.core.integration.osquery;
+package org.s7s.core.integration.osquery;
 
 import java.io.IOException;
 import java.net.URI;
@@ -19,13 +18,13 @@ import java.nio.file.Path;
 import java.util.Optional;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sandpolis.core.foundation.Platform.ArchType;
-import com.sandpolis.core.foundation.Platform.OsType;
-import com.sandpolis.core.foundation.S7SFile;
-import com.sandpolis.core.foundation.S7SProcess;
-import com.sandpolis.core.foundation.S7SSystem;
-import com.sandpolis.core.integration.osquery.Installer.Response.Asset;
-import com.sandpolis.core.integration.pacman.Pacman;
+import org.s7s.core.foundation.Platform.ArchType;
+import org.s7s.core.foundation.Platform.OsType;
+import org.s7s.core.foundation.S7SFile;
+import org.s7s.core.foundation.S7SProcess;
+import org.s7s.core.foundation.S7SSystem;
+import org.s7s.core.integration.osquery.Installer.Response.Asset;
+import org.s7s.core.integration.pacman.Pacman;
 
 public class Installer {
 
