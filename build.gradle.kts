@@ -11,6 +11,7 @@ plugins {
 	id("java-library")
 	id("org.s7s.build.module")
 	id("org.s7s.build.publish")
+	id("org.s7s.build.codegen")
 }
 
 dependencies {
