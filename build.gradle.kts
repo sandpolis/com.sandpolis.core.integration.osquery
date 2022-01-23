@@ -9,9 +9,15 @@
 
 plugins {
 	id("java-library")
+	kotlin("multiplatform") version "1.6.10"
 	id("org.s7s.build.module")
 	id("org.s7s.build.publish")
 	id("org.s7s.build.codegen")
+}
+
+kotlin {
+	jvm()
+	linuxX64()
 }
 
 dependencies {
@@ -26,8 +32,8 @@ dependencies {
 		implementation("org.s7s:core.instance:+")
 		implementation("org.s7s:core.integration.pacman:+")
 	} else {
-		implementation(project(":core:org.s7s.core.foundation"))
-		implementation(project(":core:org.s7s.core.instance"))
-		implementation(project(":core:integration:org.s7s.core.integration.pacman"))
+		implementation(project(":core:foundation"))
+		implementation(project(":core:instance"))
+		implementation(project(":core:ext:pacman"))
 	}
 }
